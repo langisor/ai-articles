@@ -45,6 +45,8 @@ export default defineConfig({
 
     // External link icon
     externalLinkIcon: true,
+
+
     // Navigation bar configuration
     nav: [
       { text: 'Home', link: '/' },
@@ -71,6 +73,7 @@ export default defineConfig({
           {
             text: 'TypeScript Mastery',
             items: [
+              { text: 'TS Cheatsheet', link: '/react-ts/master-ts-in-react/ts-cheatsheet' },
               { text: 'Booklet Guide', link: '/react-ts/master-ts-in-react/booklet-guide' },
               { text: 'Reference Guide', link: '/react-ts/master-ts-in-react/reference-guide' },
             ],
@@ -146,6 +149,7 @@ export default defineConfig({
           text: 'TypeScript Mastery',
           collapsed: false,
           items: [
+            { text: 'TS Cheatsheet', link: '/react-ts/master-ts-in-react/ts-cheatsheet' },
             { text: 'Booklet Guide', link: '/react-ts/master-ts-in-react/booklet-guide' },
             { text: 'Reference Guide', link: '/react-ts/master-ts-in-react/reference-guide' },
           ],
