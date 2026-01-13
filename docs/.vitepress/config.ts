@@ -101,6 +101,7 @@ export default defineConfig({
           {
             text: 'VitePress',
             items: [
+              { text: 'This Site How To', link: '/vitepress/ai-articles-site-example.md' },
               { text: 'Markdown Examples', link: '/vitepress/markdown-examples' },
               { text: 'API Examples', link: '/vitepress/api-examples' },
             ],
@@ -177,6 +178,7 @@ export default defineConfig({
         {
           text: 'VitePress Guide',
           items: [
+            { text: 'This Site How To', link: '/vitepress/ai-articles-site-example.md' },
             { text: 'Markdown Examples', link: '/vitepress/markdown-examples' },
             { text: 'API Examples', link: '/vitepress/api-examples' },
           ],
@@ -220,7 +222,7 @@ export default defineConfig({
 
     // Optional: Add social links
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' },
+      { icon: 'github', link: 'https://github.com/langisor/' },
     ],
 
     // Optional: Add footer
