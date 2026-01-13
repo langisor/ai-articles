@@ -9,9 +9,9 @@
 
 :root {
   /* Brand colors */
-  --vp-c-brand-1: #3b82f6;
-  --vp-c-brand-2: #2563eb;
-  --vp-c-brand-3: #1d4ed8;
+  --vp-c-brand-1: #3b82f6; /*Primary brand color*/
+  --vp-c-brand-2: #2563eb; /*Hover state*/
+  --vp-c-brand-3: #1d4ed8; /*Active state*/
   --vp-c-brand-soft: rgba(59, 130, 246, 0.14);
 
   /* Background colors */
@@ -172,7 +172,6 @@ To change the brand colors, just update these variables in custom.css:
   --vp-c-brand-2: #2563eb;  Hover state
   --vp-c-brand-3: #1d4ed8;  Active state
 /* } */
-
 
 /*
 Popular color schemes:
