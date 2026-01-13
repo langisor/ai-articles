@@ -1,0 +1,185 @@
+/**
+ * Customize default theme styling by overriding CSS variables:
+ * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
+ */
+
+/**
+ * Colors
+ * -------------------------------------------------------------------------- */
+
+:root {
+  /* Brand colors */
+  --vp-c-brand-1: #3b82f6;
+  --vp-c-brand-2: #2563eb;
+  --vp-c-brand-3: #1d4ed8;
+  --vp-c-brand-soft: rgba(59, 130, 246, 0.14);
+
+  /* Background colors */
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-alt: #f6f6f7;
+  --vp-c-bg-elv: #ffffff;
+  --vp-c-bg-soft: #f6f6f7;
+
+  /* Typography */
+  --vp-c-text-1: rgba(60, 60, 67);
+  --vp-c-text-2: rgba(60, 60, 67, 0.78);
+  --vp-c-text-3: rgba(60, 60, 67, 0.56);
+
+  /* Sidebar */
+  --vp-sidebar-width: 280px;
+}
+
+.dark {
+  /* Brand colors for dark mode */
+  --vp-c-brand-1: #60a5fa;
+  --vp-c-brand-2: #3b82f6;
+  --vp-c-brand-3: #2563eb;
+  --vp-c-brand-soft: rgba(96, 165, 250, 0.14);
+
+  /* Background colors for dark mode */
+  --vp-c-bg: #1b1b1f;
+  --vp-c-bg-alt: #161618;
+  --vp-c-bg-elv: #202127;
+  --vp-c-bg-soft: #202127;
+
+  /* Typography for dark mode */
+  --vp-c-text-1: rgba(255, 255, 245, 0.86);
+  --vp-c-text-2: rgba(235, 235, 245, 0.6);
+  --vp-c-text-3: rgba(235, 235, 245, 0.38);
+}
+
+/**
+ * Component: Button
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-text: var(--vp-c-white);
+  --vp-button-brand-bg: var(--vp-c-brand-3);
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-hover-text: var(--vp-c-white);
+  --vp-button-brand-hover-bg: var(--vp-c-brand-2);
+  --vp-button-brand-active-border: transparent;
+  --vp-button-brand-active-text: var(--vp-c-white);
+  --vp-button-brand-active-bg: var(--vp-c-brand-1);
+}
+
+/**
+ * Component: Custom Block
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-custom-block-tip-border: transparent;
+  --vp-custom-block-tip-text: var(--vp-c-text-1);
+  --vp-custom-block-tip-bg: var(--vp-c-brand-soft);
+  --vp-custom-block-tip-code-bg: var(--vp-c-brand-soft);
+}
+
+/**
+ * Component: Nav
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-nav-height: 64px;
+  --vp-nav-bg-color: var(--vp-c-bg);
+  --vp-nav-screen-bg-color: var(--vp-c-bg);
+}
+
+.dark {
+  --vp-nav-bg-color: var(--vp-c-bg-alt);
+  --vp-nav-screen-bg-color: var(--vp-c-bg-alt);
+}
+
+/**
+ * Component: Sidebar
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-sidebar-bg-color: var(--vp-c-bg-alt);
+}
+
+.dark {
+  --vp-sidebar-bg-color: var(--vp-c-bg);
+}
+
+/**
+ * Component: Code
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-code-line-height: 1.7;
+  --vp-code-font-size: 0.875em;
+  --vp-code-color: var(--vp-c-brand-1);
+  --vp-code-bg: var(--vp-c-bg-soft);
+
+  --vp-code-block-color: rgba(235, 235, 245, 0.38);
+  --vp-code-block-bg: var(--vp-c-bg-alt);
+}
+
+/**
+ * Component: Home
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(
+    135deg,
+    #3b82f6 10%,
+    #8b5cf6 100%
+  );
+
+  --vp-home-hero-image-background-image: linear-gradient(
+    -45deg,
+    #3b82f6 50%,
+    #8b5cf6 50%
+  );
+  --vp-home-hero-image-filter: blur(44px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--vp-c-bg-soft);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--vp-c-brand-2);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vp-c-brand-1);
+}
+
+/* Smooth transitions */
+.dark,
+.dark * {
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+/*
+To change the brand colors, just update these variables in custom.css:
+:root {
+  /* Change these to your brand colors 
+  --vp-c-brand-1: #3b82f6;  Primary brand color
+  --vp-c-brand-2: #2563eb;  Hover state
+  --vp-c-brand-3: #1d4ed8;  Active state
+/* } */
+
+
+/*
+Popular color schemes:
+
+Blue (default): #3b82f6, #2563eb, #1d4ed8
+Purple: #8b5cf6, #7c3aed, #6d28d9
+Green: #10b981, #059669, #047857
+Orange: #f59e0b, #d97706, #b45309
+
+*/
