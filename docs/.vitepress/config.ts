@@ -4,7 +4,7 @@ import { defineConfig } from 'vitepress';
 export default defineConfig({
   lang: 'en-US',
   title: 'AI Articles',
-
+  base: '/ai-articles/',
   description: 'A comprehensive collection of React, TypeScript, and Next.js guides and tutorials.',
 
 
