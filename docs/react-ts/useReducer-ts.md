@@ -330,4 +330,4 @@ By combining `useReducer` with TypeScript, you gain the benefits of predictable 
 
 ## Comperhensive Examples
 
-- [Example: Shopping Cart Management](../examples/shopping-cart-management.md)
+- [Example: Shopping Cart Management](./../nextjs//shopping-cart-example.md)
