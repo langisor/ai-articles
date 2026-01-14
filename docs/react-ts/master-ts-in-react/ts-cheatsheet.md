@@ -1,8 +1,10 @@
-# Typing Objects
+# Typescript Cheatsheet
 
-> Original Article: [TS Cheatsheet](https://github.com/mudssrali/typescript-cheatsheet)
+> [https://github.com/mudssrali/typescript-cheatsheet](https://github.com/mudssrali/typescript-cheatsheet)
 
-## `Object` vs `object`
+## Typing Objects
+
+### `Object` vs `object`
 
 - **Object** is the type of all instances of class **Object** _OR_ Contains stuff (like `toString()`, `hasOwnProperty()`) that is present in all JavaScript objects. Any value (primitive, non-primitive) can be assigned to `Object` type.
   - It describes functionality that is common to all JavaScript objects
@@ -37,7 +39,7 @@
 
 - **{}** is an empty object. It is the same as `Object`
 
-## Interface Signatures Overview
+### Interface Signatures Overview
 
 ```ts
 interface RepoInterface {
@@ -58,13 +60,11 @@ interface RepoInterface {
 }
 ```
 
-### Index Signature
+#### Index Signature
 
 Helps to describe Arrays or objects that are used as dictionaries.
 
-::: info
 If there are both an index signature and property and/or method signatures in an interface, the type of the index property value must also be a `supertype` of the type of the property value and/or method
-:::
 
 ```ts
 interface RepoInterface {
@@ -94,7 +94,7 @@ interface RepoInterface {
 }
 ```
 
-### Call Signature
+#### Call Signature
 
 Enables interfaces to describe functions. **NOTE** `this` is the optional calling context of the function in this example:
 
@@ -110,7 +110,7 @@ const myListener: ClickListener = (e) => {
 addEventListener("click", myListener);
 ```
 
-### Construct Signature
+#### Construct Signature
 
 Enables describing classes and constructor functions. A class has two types:
 
@@ -158,7 +158,7 @@ const clockClassDeclaration = createClock(ClockB, 12, 17)
 
 **[Typescript Docs - Class Type](https://www.typescriptlang.org/docs/handbook/interfaces.html#class-types)**
 
-## Type Literal Syntax
+### Type Literal Syntax
 
 Typically used in the signature of a higher-order function, but it's not limited to this.
 
@@ -171,7 +171,7 @@ type Point = {
 type SetPoint = (x: number, y: number) => void;
 ```
 
-## Excess Properties
+### Excess Properties
 
 - Engineers **can’t** just think of interfaces as “objects that have exactly a
   set of properties” or “objects that have at least a set of properties”.
@@ -215,7 +215,7 @@ interface Dog {
 }
 ```
 
-## Interface vs Type
+### Interface vs Type
 
 Unlike an **interface** declaration, which always introduces a named `object` type, a **type** alias declaration can introduce a name for any kind of type, including `primitive`, `union`, and `intersection` types. With examples, you can find some in-depth difference between `interface` and `type`.
 
@@ -360,9 +360,9 @@ Unlike an **interface** declaration, which always introduces a named `object` ty
   const point: Point = { x: 1, y: 2 };
   ```
 
-# Mapped Types - Getting Types from Data
+## Mapped Types - Getting Types from Data
 
-## `typeof` / `keyof` Examples
+### `typeof` / `keyof` Examples
 
 ```ts
 const data = {
@@ -405,7 +405,7 @@ const currencySymbols = {
 type CurrencySymbol = keyof typeof currencySymbols; // "GBP" | "USD" | "EUR"
 ```
 
-## `keyof` with Generics and Interfaces Example
+### `keyof` with Generics and Interfaces Example
 
 **Exampl-1**:
 
@@ -462,7 +462,7 @@ const text = prop(todo, "text"); // string
 const due = prop(todo, "due"); // Date
 ```
 
-## Lookup Types
+### Lookup Types
 
 ```ts
 interface Person {
@@ -488,9 +488,9 @@ Article Links:
 
 - [More Read about Keyof and Lookup Types](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-1.html#keyof-and-lookup-types)
 
-# Immutability
+## Immutability
 
-## `readonly` Properties
+### `readonly` Properties
 
 Properties marked with `readonly` can only be assigned to during initialization
 or from within a constructor of the same class.
@@ -518,7 +518,7 @@ function moveX(p: Point, offset: number): Point {
 }
 ```
 
-## `readonly` Class Properties
+### `readonly` Class Properties
 
 Gettable area property is implicitly read-only because there’s no setter:
 
@@ -536,7 +536,7 @@ class Circle {
 }
 ```
 
-## `readonly` Array / Tuple
+### `readonly` Array / Tuple
 
 Here are different usecases of readonly
 
@@ -579,7 +579,7 @@ Here are different usecases of readonly
   const tuple: readonly [string, string];
   ```
 
-## `const` Assertions
+### `const` Assertions
 
 - `number` becomes number literal
 
@@ -596,7 +596,7 @@ Here are different usecases of readonly
   ```
 
 - object literals get `readonly` properties
-- no literal types in that expression should be widened (e.g. no going from `"hello"` to `string`)
+- no literal types in that expression should be widened (e.g. no going from `"hello"` to `string`)
 
   ```ts
   // Type '{ readonly text: "hello" }'
@@ -635,7 +635,7 @@ Here are different usecases of readonly
   let types: readonly string[] = ["Asian", "European"];
   ```
 
-# Strict Mode
+## Strict Mode
 
 ```json
   strict: true /* Enable all strict type-checking options. */
@@ -655,7 +655,7 @@ is equivalent to enabling all of the strict mode family options:
 
 You can then turn off individual strict mode family checks as needed.
 
-## Non-Nullable Types `--strictNullChecks`
+### Non-Nullable Types `--strictNullChecks`
 
 In strict null checking mode, `null` and `undefined` are no longer assignable to
 every type.
@@ -742,7 +742,7 @@ function doSomething(callback?: () => void) {
 }
 ```
 
-## Strict Bind Call Apply `--strictBindCallApply`
+### Strict Bind Call Apply `--strictBindCallApply`
 
 > The `call()` method calls a function with a given `this` value and arguments
 > provided individually, while `apply()` accepts a single array of arguments.
@@ -764,7 +764,7 @@ const n1 = fn.call(undefined, "10"); // OK
 const n2 = fn.call(undefined, false); // Argument of type 'false' is not assignable to parameter of type 'string'.
 ```
 
-## Strict Class Property Initialization `--strictPropertyInitialization`
+### Strict Class Property Initialization `--strictPropertyInitialization`
 
 Verify that each instance property declared in a class either:
 
@@ -811,9 +811,9 @@ const username =
   typeof user.username === "string" ? user.username.toLowerCase() : "n/a";
 ```
 
-# Types
+## Types
 
-## `never`
+### `never`
 
 `never` represents the type of values that never occur. It is used in the
 following two places:
@@ -835,12 +835,12 @@ function controlFlowAnalysisWithNever(value: string | number) {
 }
 ```
 
-## `unknown`
+### `unknown`
 
 `unknown` is the type-safe counterpart of the `any` type: we have to do some
 form of checking before performing most operations on values of type `unknown`.
 
-### Reading `JSON` from `localStorage` using `unknown` Example
+#### Reading `JSON` from `localStorage` using `unknown` Example
 
 ```ts
 type Result =
@@ -878,12 +878,12 @@ function tryDeserializeLocalStorageItem(key: string): Result {
 }
 ```
 
-# Generics
+## Generics
 
 Generics enable you to create reusable code components that work with a number
 of types instead of a single type.
 
-## With and Without Type Argument Inference
+### With and Without Type Argument Inference
 
 ```ts
 function identity<T>(arg: T): T {
@@ -895,7 +895,7 @@ let output = identity("myString"); // type argument inference
 // compiler sets the value of `T` based on the type of the argument we pass in
 ```
 
-## Working with Generic Type Variables
+### Working with Generic Type Variables
 
 ```ts
 function loggingIdentity<T>(arg: T): T {
@@ -911,7 +911,7 @@ function loggingIdentity<T>(arg: Array<T>): Array<T> {
 }
 ```
 
-## Using More Than One Type Argument
+### Using More Than One Type Argument
 
 No value arguments are needed in this case:
 
@@ -939,7 +939,7 @@ setPair(1, "y"); // must be type of (number, string)
 getPair(); // will return pair of type { number, string }
 ```
 
-## Higher Order Function with `Parameters<T>` and `ReturnType<T>`
+### Higher Order Function with `Parameters<T>` and `ReturnType<T>`
 
 ```ts
 // Input a function `<T extends (...args: any[]) => any>`
@@ -982,7 +982,7 @@ myGenericNumber.add = function (x, y) {
 };
 ```
 
-# Discriminated Unions
+## Discriminated Unions
 
 Discriminated Unions provide a powerful pattern in TypeScript. Immensely useful for actions & reducers in `ngrx/redux`, and every time you have to distinguish between `kinds` of objects. They enaWtype inference which, combined with strict null checks, will catch a lot of bugs! [By Minko Gechev](https://twitter.com/mgechev/status/1255021510563115008)
 
@@ -1015,9 +1015,9 @@ function magic(payer: TaxPayer) {
 }
 ```
 
-# Optional Chaining
+## Optional Chaining
 
-## `?.` returns `undefined` when hitting a `null` or `undefined`
+### `?.` returns `undefined` when hitting a `null` or `undefined`
 
 Album where the artist, and the artists biography might not be present in the
 data.
@@ -1108,9 +1108,9 @@ let temp = foo === null || foo === undefined ? undefined : foo.bar;
 let result = temp / someComputation();
 ```
 
-# Nullish Coalescing
+## Nullish Coalescing
 
-## `??` “fall Backs” to a Default Value When Dealing with `null` or `undefined`
+### `??` “fall Backs” to a Default Value When Dealing with `null` or `undefined`
 
 Value `foo` will be used when it’s “present”; but when it’s `null` or
 `undefined`, calculate `bar()` in its place.
@@ -1132,9 +1132,9 @@ function initializeAudio() {
 }
 ```
 
-# Comments
+## Comments
 
-## ts-expect-error - 3.9
+### ts-expect-error - 3.9
 
 TypeScript 3.9 brings a new feature: `// @ts-expect-error` comments. When a line is prefixed with a `// @ts-expect-error` comment, TypeScript will suppress that error from being reported; but if there’s no error, TypeScript will report that `// @ts-expect-error` wasn’t necessary.
 
@@ -1146,7 +1146,7 @@ console.log(47 * "octopus"); // OK, no problem here
 console.log(1 + 1); // Unused '@ts-expect-error' directive.
 ```
 
-## ts-expect-error vs ts-ignore
+### ts-expect-error vs ts-ignore
 
 In some ways `// @ts-expect-error` can act as a suppression comment, similar to `// @ts-ignore`. The difference is that `// @ts-ignore` will do nothing if the following line is error-free.
 
@@ -1164,7 +1164,7 @@ You might be tempted to switch existing `// @ts-ignore` comments over to `// @ts
 - you are in the middle of an upgrade between two different versions of TypeScript, and a line of code errors in one version but not another.
 - you honestly don’t have the time to decide which of these options is better
 
-## TS 4.0 - 4.2
+### TS 4.0 - 4.2
 
 - [ ] Short-Circuiting Assignment Operators
 - [ ] Template Literal Types
@@ -1173,14 +1173,14 @@ You might be tempted to switch existing `// @ts-ignore` comments over to `// @ts
 - [ ] Paths without baseUrl
 - [ ] Destructured Variables Can Be Explicitly Marked as Unused
 
-## TS 4.3 - 4.4
+### TS 4.3 - 4.4
 
 - [ ] (Template String Type Improvements)
 - [ ] (Editor Support for @link Tags)
 - [ ] (Go-to-Definition on Non-JavaScript File Paths)
 - [ ] (Inlay Hints)
 
-## TS 4.5 - 5.4
+### TS 4.5 - 5.4
 
 > Will update soon
 
