@@ -954,7 +954,7 @@ function logDuration<T extends (...args: any[]) => any>(func: T) {
     const results = func(...args);
     console.timeEnd(funcName);
     return results;
-  };
+  }
 }
 
 function addNumbers(a: number, b: number): number {
