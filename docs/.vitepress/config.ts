@@ -93,6 +93,7 @@ export default defineConfig({
           { text: 'Shopping Cart Example', link: '/nextjs/shopping-cart-example' },
           { text: 'Convert to PWA', link: '/nextjs/convert-to-pwa' },
           { text: 'useParams Example', link: '/nextjs/useParams-example' },
+          { text: 'Building TS Architecture In Nextjs', link: '/nextjs/building-ts-layers' }
         ],
       },
 
@@ -173,6 +174,8 @@ export default defineConfig({
             { text: 'Shopping Cart Example', link: '/nextjs/shopping-cart-example' },
             { text: 'useParams Example', link: '/nextjs/useParams-example' },
             { text: 'Convert to PWA', link: '/nextjs/convert-to-pwa' },
+            { text: 'Building TS Architecture In Nextjs', link: '/nextjs/building-ts-layers' },
+
           ],
         },
       ],
