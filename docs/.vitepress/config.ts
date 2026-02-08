@@ -33,7 +33,7 @@ export default defineConfig({
         timeStyle: 'short'
       }
     },
-
+ 
     // Document footer (prev/next navigation)
     docFooter: {
       prev: 'Previous',
@@ -45,8 +45,7 @@ export default defineConfig({
 
     // External link icon
     externalLinkIcon: true,
-
-
+    
     // Navigation bar configuration
     nav: [
       { text: 'Home', link: '/' },

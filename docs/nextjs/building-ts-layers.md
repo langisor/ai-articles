@@ -6,7 +6,7 @@
 
 This architecture follows the **Repository Pattern** with clear separation of concerns:
 
-```
+```shell
 Data Layer (JSON files)
     ↓
 Repository Layer (data access)
@@ -1208,3 +1208,116 @@ export function useUsers(params?: UserQueryParams) {
 ```
 
 This architecture provides **type safety**, **separation of concerns**, **reusability**, and **testability** for managing local JSON data in Next.js applications.
+
+## Simplified ASCII Diagram
+
+Here's a simplified `ASCII` representation of the TypeScript layers architecture:
+
+
+```bash
+┌─────────────────────────────────────────────────────────────────┐
+│                         CLIENT LAYER                             │
+│  • React Components (use client)  • Custom Hooks  • Forms       │
+└────────────────────────────┬────────────────────────────────────┘
+                             │
+                    fetch('/api/users')
+                             │
+                             ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                    PRESENTATION LAYER                            │
+│  • API Routes (/app/api/*/route.ts)                             │
+│  • Server Components (direct service access)                     │
+└────────────────────────────┬────────────────────────────────────┘
+                             │
+                  userService.createUser()
+                             │
+                             ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                     SERVICE LAYER                                │
+│  • Business Logic  • Validation  • Orchestration                │
+│  • UserService  • ProductService  • ChartService                │
+└────────────────────────────┬────────────────────────────────────┘
+                             │
+                  repository.create()
+                             │
+                             ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                    REPOSITORY LAYER                              │
+│  • CRUD Operations  • Queries  • File I/O                       │
+│  • BaseRepository<T>  • UserRepository  • ProductRepository     │
+└────────────────────────────┬────────────────────────────────────┘
+                             │
+                  fs.writeFile('data/users.json')
+                             │
+                             ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                       DATA LAYER                                 │
+│  • JSON Files  • File System  • Storage                         │
+│  • users.json  • products.json  • orders.json                   │
+└─────────────────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════
+                    TYPE SYSTEM (Cross-Cutting)
+  Entities • DTOs • Query Params • API Responses • Paginated Data
+═══════════════════════════════════════════════════════════════════
+```
+
+## Nextjs App Path Tree
+
+
+```shell
+src/
+├── types/                    # TypeScript definitions
+│   ├── user.types.ts        # User, CreateUserDTO, UserQueryParams
+│   ├── product.types.ts     # Product, CreateProductDTO
+│   └── chart.types.ts       # ChartDataPoint, PieChartSegment
+│
+├── repositories/             # Data access layer
+│   ├── base.repository.ts   # Generic CRUD operations
+│   ├── user.repository.ts   # User-specific queries
+│   └── product.repository.ts
+│
+├── services/                 # Business logic layer
+│   ├── user.service.ts      # User business rules
+│   ├── product.service.ts   # Product & inventory logic
+│   └── chart.service.ts     # Data transformation
+│
+├── hooks/                    # Client-side data fetching
+│   ├── use-users.ts
+│   └── use-products.ts
+│
+├── components/
+│   ├── ui/                  # Shadcn components
+│   ├── charts/              # Chart components
+│   │   ├── pie-chart.tsx
+│   │   ├── bar-chart.tsx
+│   │   └── line-chart.tsx
+│   └── user-list.tsx
+│
+├── app/
+│   ├── api/                 # API Routes (Presentation)
+│   │   ├── users/
+│   │   │   ├── route.ts    # GET, POST /api/users
+│   │   │   └── [id]/
+│   │   │       └── route.ts # GET, PATCH, DELETE
+│   │   └── products/
+│   │       └── route.ts
+│   │
+│   ├── users/               # Pages (Server Components)
+│   │   ├── page.tsx        # Direct service access
+│   │   └── [id]/
+│   │       └── page.tsx
+│   │
+│   └── dashboard/
+│       └── page.tsx         # Charts & analytics
+│
+└── data/                    # JSON storage
+    ├── users.json
+    ├── products.json
+    └── orders.json`}
+
+```
+
+
+
+This architecture ensures **clean separation**, **type safety**, and **maintainability** across your entire Next.js application!
