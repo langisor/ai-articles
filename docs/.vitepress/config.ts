@@ -10,7 +10,7 @@ export default defineConfig({
 
   themeConfig: {
     siteTitle: "AI Articles", // or false if want only logo.svg
-    logo: "/logo.svg", // Add your logo to docs/public/logo.svg
+    logo: "logo.svg", // Add your logo to docs/public/logo.svg
     // Appearance toggle (dark/light mode)
     appearance: true, // Enable dark mode toggle
     // Outline(table of contents) on the right
@@ -116,9 +116,14 @@ export default defineConfig({
           },
           { text: "Convert to PWA", link: "/nextjs/convert-to-pwa" },
           { text: "useParams Example", link: "/nextjs/useParams-example" },
+
           {
-            text: "Building TS Architecture In Nextjs",
-            link: "/nextjs/building-ts-layers",
+            text: "Next.js App Router — Software Architecture Guide",
+            link: "/nextjs/software-architecture/software-architecture",
+          },
+          {
+            text: "Building Typescript Architecture In `Nextjs` App Router",
+            link: "/nextjs/software-architecture/building-ts-layers",
           },
         ],
       },
@@ -229,7 +234,7 @@ export default defineConfig({
       // Next.js sidebar
       "/nextjs/": [
         {
-          text: "Next.js Examples",
+          text: "Next.js Client Technilogies",
           items: [
             {
               text: "Server Actions & SWR",
@@ -245,9 +250,24 @@ export default defineConfig({
             },
             { text: "useParams Example", link: "/nextjs/useParams-example" },
             { text: "Convert to PWA", link: "/nextjs/convert-to-pwa" },
+          ],
+        },
+        {
+          text: "Next.js Software Architecture",
+          collapsed: false,
+          items: [
             {
-              text: "Building TS Architecture In Nextjs",
-              link: "/nextjs/building-ts-layers",
+              text: "Software Architecture In Nextjs App Router",
+              items: [
+                {
+                  text: "Software Architecture In Nextjs App Router",
+                  link: "/nextjs/software-architecture/software-architecture",
+                },
+                {
+                  text: "Building Typescript Architecture In Nextjs App Router",
+                  link: "/nextjs/software-architecture/building-ts-layers",
+                },
+              ],
             },
           ],
         },
@@ -307,6 +327,10 @@ export default defineConfig({
             {
               text: "Smart Table Component",
               link: "/nextjs/smart-table-component",
+            },
+            {
+              text: "Software Architecture In `Nextjs`",
+              link: "/nextjs/software-architecture/index",
             },
           ],
         },

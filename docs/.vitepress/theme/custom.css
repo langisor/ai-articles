@@ -87,7 +87,7 @@
 
 .dark {
   --vp-nav-bg-color: var(--vp-c-bg-alt);
-  --vp-nav-screen-bg-color: var(--vp-c-bg-alt);
+  --vp-nav-screen-bg-color: var(--vp-c-bg);
 }
 
 /**
@@ -110,9 +110,9 @@
   --vp-code-line-height: 1.7;
   --vp-code-font-size: 0.875em;
   --vp-code-color: var(--vp-c-brand-1);
-  --vp-code-bg: var(--vp-c-bg-soft);
+  --vp-code-bg: var(--vp-c-bg-alt);
 
-  --vp-code-block-color: rgba(235, 235, 245, 0.38);
+  --vp-code-block-color: var(--vp-c-brand-1);
   --vp-code-block-bg: var(--vp-c-bg-alt);
 }
 
