@@ -105,6 +105,10 @@ export default defineConfig({
       {
         text: "Next.js",
         items: [
+          {
+            text: "Designing Database Engines",
+            link: "/nextjs/software-architecture/db-engines/full-guide",
+          },
           { text: "Server Actions & SWR", link: "/nextjs/action-swr-example" },
           {
             text: "Smart Table Component",
