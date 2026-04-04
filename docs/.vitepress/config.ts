@@ -1,7 +1,7 @@
-import { defineConfig } from "vitepress";
+import {withMermaid} from "vitepress-plugin-mermaid";
 
 // refer https://vitepress.dev/reference/site-config for details
-export default defineConfig({
+export default withMermaid({
   lang: "en-US",
   title: "AI Articles",
   base: "/ai-articles/",
@@ -377,6 +377,12 @@ export default defineConfig({
       },
     },
   },
+  mermaid: {
+    theme: "default",
+  },
+  mermaidPlugin:{
+    
+  }
 });
 
 /**
