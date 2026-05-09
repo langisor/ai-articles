@@ -2,9 +2,7 @@
 
 > Next.js App Router · Tailwind CSS · TypeScript · Shadcn/ui
 
----
-
-## Table of Contents
+<!-- toc -->
 
 1. [Installation & Dependencies](#1-installation--dependencies)
 2. [The SSR Problem & How to Solve It](#2-the-ssr-problem--how-to-solve-it)
@@ -18,7 +16,7 @@
 10. [Complete File Structure](#10-complete-file-structure)
 11. [Common Pitfalls & Solutions](#11-common-pitfalls--solutions)
 
----
+<!-- tocstop -->
 
 ## 1. Installation & Dependencies
 

@@ -1,4 +1,4 @@
-import {withMermaid} from "vitepress-plugin-mermaid";
+import { withMermaid } from "vitepress-plugin-mermaid";
 
 // refer https://vitepress.dev/reference/site-config for details
 export default withMermaid({
@@ -135,6 +135,10 @@ export default withMermaid({
       {
         text: "More Topics",
         items: [
+          {
+            text: "Tone.js and Nextjs",
+            link: "/tone.js-nextjs",
+          },
           { text: "DnD Kit", link: "/dnd-kit" },
           { text: "TanStack Query", link: "/tanstack-query-next14-app" },
           {
@@ -380,9 +384,7 @@ export default withMermaid({
   mermaid: {
     theme: "default",
   },
-  mermaidPlugin:{
-    
-  }
+  mermaidPlugin: {},
 });
 
 /**
