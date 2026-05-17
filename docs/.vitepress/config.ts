@@ -129,6 +129,10 @@ export default withMermaid({
             text: "Building Typescript Architecture In `Nextjs` App Router",
             link: "/nextjs/software-architecture/building-ts-layers",
           },
+          {
+            text: "Storybook with Next.js App Router, TypeScript & Shadcn UI",
+            link: "/nextjs/storybook-guide",
+          },
         ],
       },
 
