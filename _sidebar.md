@@ -1,5 +1,4 @@
 - [Read Me](README)
-- [Example Second Page](second-page)
 - [DB Engines - Full Guide](db-engines-full-guide)
 - [Software Arch.](software-architecture)
 - [Tanstack Query and Nextjs](tanstack-query-next14-app)
