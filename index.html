@@ -12,7 +12,35 @@
 
   <!-- Core Theme (see https://docsify.js.org/#/themes) -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@5/dist/themes/core.min.css">
+  
+  <!-- Dark theme support -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@5/dist/themes/addons/core-dark.min.css" media="(prefers-color-scheme: dark)" />
 
+
+  <!-- Custom CSS -->
+  <!-- <style>
+    :root {
+      /* Accent color matching a clean modern tech look */
+      --theme-color: #6366f1;
+    }
+
+    /* Adds a subtle glowing background to the cover page */
+    section.cover {
+      /* background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%) !important;
+
+       */
+     width:10%;
+     margin: 0 auto;
+    }
+
+    section.cover h1 span {
+      color: #f8fafc !important;
+    }
+
+    section.cover blockquote {
+      color: #94a3b8;
+    }
+  </style> -->
 </head>
 
 <body>
@@ -21,8 +49,10 @@
   <script>
     // Docsify Configuration (see https://docsify.js.org/#/configuration)
     window.$docsify = {
-      name: 'Simple Docsify Template',
+      name: 'AI Generated Articles',
 
+      // Cover page
+      // coverpage: true,
       // Sidebar Configuration
       auto2top: true,
       loadSidebar: true,
@@ -43,9 +73,13 @@
   <!-- Required -->
   <script src="//cdn.jsdelivr.net/npm/docsify@5/dist/docsify.min.js"></script>
 
+  <!-- Code highlighting - TypeScript -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-typescript.min.js"></script>
+  
   <!-- Recommended -->
   <script src="//cdn.jsdelivr.net/npm/docsify@5/dist/plugins/zoom-image.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify@5/dist/plugins/search.js"></script>
 
 </body>
+
 </html>

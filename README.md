@@ -5,13 +5,14 @@
 ## Site Setup
 
 ### Static Webserver
+
 Upload these template files to any static web server. The file `.nojekyll` is only required if hosting the site on GitHub Pages and otherwise can be removed.
 
 ### GitHub Pages
 
 #### Hosting Site
 
-To host this template on GitHub Pages do the following:  
+To host this template on GitHub Pages do the following:
 
 1. Log into GitHub if you have not done so already
 2. Tap the **Use this template** button in the upper-right of this GitHub Repository and choose **Create a new repository**
@@ -23,7 +24,8 @@ To host this template on GitHub Pages do the following:
 
 How about editing the content of your new Docsify site on GitHub Pages? View the Markdown page you want to edit (for example, **README.md**) and tap the **Pencil Icon**, then save any changes by tapping the green **Commit changes...** button. In just a few moments the Docsify site will be automatically updated to reflect those changes.
 
-### Viewing Locally 
+### Viewing Locally
+
 Run `npx serve .` (Node.js users) or `python -m http.server 8000` (Python users) in the repo folder to serve run locally.
 
 ## Docsify Documentation
