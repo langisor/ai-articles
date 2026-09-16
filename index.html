@@ -1,85 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
-
-  <!-- Replace with your own title and description. -->
-  <title>Awesome Docsify Site</title>
-  <meta name="description" content="An awesome docsify site for publishing some content on the web.">
-
-  <!-- Light and dark mode -->
-
-<link
-  rel="stylesheet"
-  href="//cdn.jsdelivr.net/npm/prism-themes@1/themes/prism-one-light.min.css"
-/>
-
-  <!-- Custom CSS -->
-  <!-- <style>
-    :root {
-      /* Accent color matching a clean modern tech look */
-      --theme-color: #6366f1;
-    }
-
-    /* Adds a subtle glowing background to the cover page */
-    section.cover {
-      /* background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%) !important;
-
-       */
-     width:10%;
-     margin: 0 auto;
-    }
-
-    section.cover h1 span {
-      color: #f8fafc !important;
-    }
-
-    section.cover blockquote {
-      color: #94a3b8;
-    }
-  </style> -->
+  <title>Document</title>
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@5/dist/themes/core.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@5/dist/themes/addons/vue.min.css">
 </head>
-
 <body>
   <div id="app"></div>
-
   <script>
-    // Docsify Configuration (see https://docsify.js.org/#/configuration)
     window.$docsify = {
-      name: 'AI Generated Articles',
-
-      // Cover page
-      coverpage: true,
-      // Sidebar Configuration
-      auto2top: true,
-      loadSidebar: true,
-      maxLevel: 0,
-      // Set subMaxLevel to 0 to remove automatic display of page table of contents (TOC) in Sidebar
-      subMaxLevel: 3,
-
-      // Search Plugin Configuration
-      search: {
-        placeholder: 'Type to search',
-        noData: 'No matches found.',
-        // Headline depth, 1 - 6
-        depth: 2,
-      }
-    };
+      name: '',
+      repo: ''
+    }
   </script>
-
-  <!-- Required -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@5/dist/docsify.min.js"></script>
-
-  <!-- Code highlighting - TypeScript -->
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-typescript.min.js"></script>
-  
-  <!-- Recommended -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@5/dist/plugins/zoom-image.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify@5/dist/plugins/search.js"></script>
-
+  <!-- Docsify resource -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@5"></script>
 </body>
-
 </html>
