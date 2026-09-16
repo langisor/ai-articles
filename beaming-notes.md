@@ -37,7 +37,7 @@ For each time signature below, write down what one beat equals:
 3. 4/4 → ?
 4. 9/8 → ?
 
-_Answers: 1) one quarter note 2) one dotted quarter note (3 eighth notes) 3) one quarter note 4) one dotted quarter note (3 eighth notes)_
+**Answers: 1) one quarter note 2) one dotted quarter note (3 eighth notes) 3) one quarter note 4) one dotted quarter note (3 eighth notes)**
 
 ---
 
